@@ -1,0 +1,65 @@
+.bg {
+    background-color: rgba(0, 0, 0, 0.95);
+    transition: 3s;
+}
+
+.border {
+    position: absolute;
+    top: 38%;
+    left: 45%;
+    height: 120px;
+    width: 120px;
+    border: 1px solid rgba(255, 0, 0, 0.877);
+    padding: 2px;
+    transition: 2s;
+}
+
+.spinner {
+    position: inherit;
+    left: 5px;
+    font-size: 3cm;
+    text-align: center;
+    transition: 3.5s;
+    height: 120px;
+    transition-timing-function: ease-in-out;
+}
+
+.spinner i {
+    color: rgba(255, 255, 255, 0.801);
+    cursor: pointer;
+}
+
+.card {
+    font-size: 4cm;
+    color: rgba(255, 255, 255, 0.055);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#tr {
+    position: fixed;
+    right: 15px;
+    top: 5px;
+}
+
+#tl {
+    position: fixed;
+    left: 15px;
+    top: 5px;
+}
+
+#bl {
+    position: fixed;
+    left: 15px;
+    bottom: 5px;
+}
+
+#br {
+    position: fixed;
+    right: 15px;
+    bottom: 5px;
+}
+
+.numbers {
+    color: white;
+}
