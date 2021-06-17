@@ -13,26 +13,48 @@ spinner.addEventListener("mouseleave", function(e) {
     border.style.transform = "rotate(45deg)";
 });
 
-document.getElementById("tl").addEventListener("wheel", function() {
+spinner.addEventListener("click", function() {
+    this.style.display = "none";
+    border.style.display = "none";
+    document.querySelector(".aos").style.opacity = 1;
+});
+
+document.getElementById("tl").addEventListener("mouseover", function() {
     this.style.color = "red";
     bg.style.backgroundColor = "black";
     document.getElementById("br").style.color = "#363535";
 });
 
-document.getElementById("bl").addEventListener("wheel", function() {
+document.getElementById("bl").addEventListener("mouseover", function() {
     this.style.color = "red";
     bg.style.backgroundColor = "black";
     document.getElementById("tr").style.color = "#363535";
 
 });
 
-document.getElementById("br").addEventListener("wheel", function() {
-    this.style.color = "black";
-    bg.style.backgroundColor = "#363535";
-    spinner.style.color = "black";
+let backcard = document.querySelector(".cardback");
+document.querySelector(".aos").addEventListener("mousedown", function() {
+    this.style.transform = "rotateY(180deg)";
+    this.style.opacity = 0;
+    backcard.style.transform = "rotateY(0deg)";
+    backcard.style.opacity = "1";
+
 });
 
-document.getElementById("tr").addEventListener("wheel", function() {
-    this.style.color = "black";
-    bg.style.backgroundColor = "#363535";
+document.querySelector(".aos").addEventListener("mouseup", function() {
+    this.style.transform = "rotateY(0deg)";
+    this.style.opacity = 1;
+    backcard.style.transform = "rotateY(180deg)"
+    backcard.style.opacity = "0";
+
 });
+// document.getElementById("br").addEventListener("mouseover", function() {
+//     this.style.color = "black";
+//     bg.style.backgroundColor = "#363535";
+//     spinner.style.color = "black";
+// });
+
+// document.getElementById("tr").addEventListener("mouseover", function() {
+//     this.style.color = "black";
+//     bg.style.backgroundColor = "#363535";
+// });

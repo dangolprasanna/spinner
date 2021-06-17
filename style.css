@@ -12,6 +12,8 @@
     border: 1px solid rgba(255, 0, 0, 0.877);
     padding: 2px;
     transition: 2s;
+    transform: rotate(45deg);
+    z-index: 7;
 }
 
 .spinner {
@@ -22,11 +24,13 @@
     transition: 3.5s;
     height: 120px;
     transition-timing-function: ease-in-out;
+    z-index: 5;
 }
 
 .spinner i {
     color: rgba(255, 255, 255, 0.801);
     cursor: pointer;
+    z-index: 4;
 }
 
 .card {
@@ -40,6 +44,10 @@
     position: fixed;
     right: 15px;
     top: 5px;
+}
+
+#tr:hover {
+    transform: rotateY(20deg);
 }
 
 #tl {
@@ -62,4 +70,24 @@
 
 .numbers {
     color: white;
+}
+
+.aos {
+    position: absolute;
+    left: 42%;
+    top: 25%;
+    opacity: 0;
+    transition: .3s;
+    z-index: 2;
+}
+
+.cardback {
+    position: absolute;
+    left: 42%;
+    top: 25%;
+    opacity: 0;
+    transition: .3s;
+    opacity: 0;
+    z-index: 1;
+    filter: brightness(1.3);
 }
